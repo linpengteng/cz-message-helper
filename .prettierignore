@@ -1,0 +1,10 @@
+# ignore prettier files
+
+.gitignore
+node_modules/*
+**/dist/*
+*.svg
+*.ico
+*.md
+*.log
+*.lock
