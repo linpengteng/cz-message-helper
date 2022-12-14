@@ -303,11 +303,11 @@ var znConfig = {
     return template
   },
 
-  language: 'zh'
+  language: 'cn'
 };
 
 var megreConfig = (cfg) => {
-    const def = cfg?.language === 'zh'
+    const def = cfg?.language === 'cn'
         ? znConfig
         : enConfig;
     const lastCfg = {
@@ -315,15 +315,15 @@ var megreConfig = (cfg) => {
         name: 'confirmCommit',
         default: 0,
         choices: [
-            { key: 'y', name: cfg?.language !== 'zh' ? 'Yes' : '提交', value: 'yes' },
-            { key: 'n', name: cfg?.language !== 'zh' ? 'Abort commit' : '取消', value: 'no' },
-            { key: 'e', name: cfg?.language !== 'zh' ? 'Edit message' : '修改', value: 'edit' }
+            { key: 'y', name: cfg?.language !== 'cn' ? 'Yes' : '提交', value: 'yes' },
+            { key: 'n', name: cfg?.language !== 'cn' ? 'Abort commit' : '取消', value: 'no' },
+            { key: 'e', name: cfg?.language !== 'cn' ? 'Edit message' : '修改', value: 'edit' }
         ],
         message(answers) {
             const sep = '###--------------------------------------------------------###';
             const msg = buildCommit(finalConfig, answers);
             log.info(`\n${sep}\n${msg}\n${sep}\n`);
-            return cfg?.language !== 'zh'
+            return cfg?.language !== 'cn'
                 ? 'Are you sure you want to proceed with the commit above?'
                 : '您确定要继续执行上面的提交吗？';
         }

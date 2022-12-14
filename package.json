@@ -1,6 +1,6 @@
 {
   "name": "cz-message-helper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A commit message helper for commitizen",
   "license": "MIT",
   "author": "lin pengteng <china.linpengteng@gmail.com>",
@@ -40,6 +40,7 @@
     "@types/rimraf": "^3.0.2",
     "@typescript-eslint/eslint-plugin": "^5.46.0",
     "@typescript-eslint/parser": "^5.46.0",
+    "cz-message-helper": "^1.0.0",
     "eslint": "^8.29.0",
     "eslint-plugin-vue": "^9.8.0",
     "husky": "^8.0.2",

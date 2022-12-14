@@ -5,7 +5,7 @@ import wordWrap from 'word-wrap'
 interface TypeConfig {
   questions?: Array<ListQuestion | InputQuestion | NumberQuestion | ExpandQuestion | ConfirmQuestion> | null
   templater?: ((answers: Answers, wrap: Function) => string) | null,
-  language?: 'en' | 'zh' | null
+  language?: 'en' | 'cn' | null
 }
 
 
