@@ -1,7 +1,7 @@
 import type { Answers, ListQuestion, InputQuestion, NumberQuestion, ExpandQuestion, ConfirmQuestion } from 'inquirer'
 import buildCommit from './build-commit'
 import enConfig from '../config.en'
-import znConfig from '../config.cn'
+import cnConfig from '../config.cn'
 import log from '../util/logger'
 
 
@@ -14,7 +14,7 @@ interface TypeConfig {
 
 export default (cfg: TypeConfig) => {
   const def = cfg?.language === 'cn'
-    ? znConfig
+    ? cnConfig
     : enConfig
 
 
