@@ -6,7 +6,7 @@
   "author": "lin pengteng <china.linpengteng@gmail.com>",
   "keywords": [
     "commit",
-    "commit message template",
+    "commit message",
     "commit message customizable",
     "commitizen"
   ],
@@ -40,7 +40,6 @@
     "@types/rimraf": "^3.0.2",
     "@typescript-eslint/eslint-plugin": "^5.46.0",
     "@typescript-eslint/parser": "^5.46.0",
-    "cz-message-helper": "^1.0.0",
     "eslint": "^8.29.0",
     "eslint-plugin-vue": "^9.8.0",
     "husky": "^8.0.2",
@@ -52,7 +51,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "node_modules/cz-message-helper"
+      "path": "./index.js"
     }
   },
   "engines": {

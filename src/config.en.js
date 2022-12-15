@@ -3,7 +3,7 @@ export default {
     {
       type: 'list',
       name: 'type',
-      message: 'Select the type of change that you\'re committing:',
+      message: 'Please select the type of change that you\'re committing:',
       choices: [
         { value: 'fix', name: 'fix: -------- A bug fix' },
         { value: 'feat', name: 'feat: ------- A new feature' },
@@ -23,7 +23,7 @@ export default {
     {
       type: 'list',
       name: 'scope',
-      message: 'Select the SCOPE of this change (optional):',
+      message: 'Please select the SCOPE of this change (optional):',
       choices() {
         return [
           { name: 'empty', value: false },
@@ -35,20 +35,20 @@ export default {
     {
       type: 'input',
       name: 'customScope',
-      message: 'Input the custom SCOPE of this change:',
+      message: 'Please input the custom SCOPE of this change:',
       when(answers) {
         return answers.scope === 'custom'
       },
       filter(value, answers) {
         answers.scope = value || ''
-        return ''
+        return value || ''
       }
     },
 
     {
       type: 'input',
       name: 'subject',
-      message: 'Write a SHORT tense description of the change(word number less than 50):\n',
+      message: 'Please write a SHORT tense description of the change(word number less than 50):',
       validate(value) {
         return value.length > 50
           ? `Exceed limit: 50`
@@ -59,13 +59,13 @@ export default {
     {
       type: 'input',
       name: 'body',
-      message: 'Provide a LONGER description of the change (optional). Use "\\n" to break new line:\n'
+      message: 'Please provide a LONGER description of the change (optional). Use "\\n" to break new line:'
     },
 
     {
       type: 'input',
       name: 'breaking',
-      message: 'List any BREAKING CHANGES (optional):\n',
+      message: 'Please list any BREAKING CHANGES (optional):',
       when(answers) {
         return ['feat', 'fix'].includes(answers.type.toLowerCase())
       }
@@ -74,7 +74,7 @@ export default {
     {
       type: 'input',
       name: 'footer',
-      message: 'List any ISSUES CLOSED by this change (optional). Eg: #31, #34:\n'
+      message: 'Please list any ISSUES CLOSED by this change (optional). Eg: #31, #34:'
     }
   ],
 

@@ -3,7 +3,7 @@ export default {
     {
       type: 'list',
       name: 'type',
-      message: '选择要提交的更改类型:',
+      message: '请选择要提交的更改类型:',
       choices: [
         { value: 'fix', name: 'fix: -------- 修复BUG' },
         { value: 'feat', name: 'feat: ------- 新功能' },
@@ -44,14 +44,14 @@ export default {
       },
       filter(value, answers) {
         answers.scope = value || ''
-        return ''
+        return value || ''
       }
     },
 
     {
       type: 'input',
       name: 'subject',
-      message: '简明扼要的摘要描述(建议字数在50字内):\n',
+      message: '请简明扼要的摘要描述(建议字数在50字内):',
       validate(value) {
         return value.length > 50
           ? `[subject] Exceed limit: 50`
@@ -62,13 +62,13 @@ export default {
     {
       type: 'input',
       name: 'body',
-      message: '提供更详细的变更说明(可选), 使用“\\n”换行:\n'
+      message: '请提供更详细的变更说明(可选), 使用“\\n”换行:'
     },
 
     {
       type: 'input',
       name: 'breaking',
-      message: '列出任何重大变化(可选)\n',
+      message: '请列出任何重大变化(可选)\n',
       when(answers) {
         return ['feat', 'fix'].includes(answers.type.toLowerCase())
       }
@@ -77,7 +77,7 @@ export default {
     {
       type: 'input',
       name: 'footer',
-      message: '列出此更改关闭的任何问题(可选), 例如: #31,#34:\n'
+      message: '请列出此更改关闭的任何问题(可选), 例如: #31,#34:'
     }
   ],
 
