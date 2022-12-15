@@ -76,7 +76,7 @@
 
 ```js
 module.exports = {
-  language: 'en' // 选项: en | cn
+  language: 'cn' // 选项: en | cn
 }
 ```
 
