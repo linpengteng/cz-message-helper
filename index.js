@@ -207,7 +207,7 @@ var enConfig = {
   language: 'en'
 };
 
-var znConfig = {
+var cnConfig = {
   questions: [
     {
       type: 'list',
@@ -308,7 +308,7 @@ var znConfig = {
 
 var megreConfig = (cfg) => {
     const def = cfg?.language === 'cn'
-        ? znConfig
+        ? cnConfig
         : enConfig;
     const lastCfg = {
         type: 'expand',
