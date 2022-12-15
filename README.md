@@ -57,7 +57,7 @@
 
 <br/>
 
-# Usage
+# 如何使用
 1. 在package.json中添加commitizen配置
 
 ```json
