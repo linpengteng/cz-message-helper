@@ -5,6 +5,7 @@
   <a href="https://nodejs.org/en/about/releases/"><img src="https://img.shields.io/node/v/cz-message-helper.svg" alt="node compatibility"></a>
   <a href="https://www.npmjs.com/package/cz-message-helper"><img src="https://img.shields.io/npm/dm/cz-message-helper.svg?sanitize=true" alt="downloads"></a>
   <a href="https://www.npmjs.com/package/cz-message-helper"><img src="https://img.shields.io/npm/l/cz-message-helper.svg?sanitize=true" alt="License"></a>
+  <a href="https://www.npmjs.com/package/commitizen"><img src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg" alt="commitizen"></a>
 </p>
 
 <p align="center">
