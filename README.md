@@ -218,7 +218,7 @@ export default {
     {
       type: 'input',
       name: 'breaking',
-      message: '请列出任何重大变化(可选)\n',
+      message: '请列出任何重大变化(可选)',
       when(answers) {
         return ['feat', 'fix'].includes(answers.type.toLowerCase())
       }
