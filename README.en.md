@@ -31,7 +31,7 @@
 > Since cz-message-helper is a plug-in for committen. you need to install the following dependencies  
 > + [commitizen](https://github.com/commitizen/cz-cli)  ------------------------- Standardize your commit message
 > + [@commitlint/cli](https://github.com/conventional-changelog/commitlint) --------------------- A commitizen cli
-> + [@commitlint/config-conventional](github.com/conventional-changelog/commitlint) ---- A commit message specification rule
+> + [@commitlint/config-conventional](https://github.com/conventional-changelog/commitlint) ---- A commit message specification rule
 > + [husky](https://github.com/typicode/husky) ------------------------------- Brefore git commit lint commit message
 
 

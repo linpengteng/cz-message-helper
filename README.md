@@ -31,7 +31,7 @@
 > 因为cz-message-helper是committen的插件, 所以您需要安装以下依赖项 
 > + [commitizen](https://github.com/commitizen/cz-cli)  ------------------------- 规范你的提交消息
 > + [@commitlint/cli](https://github.com/conventional-changelog/commitlint) --------------------- `commitizen` `cli` 工具  
-> + [@commitlint/config-conventional](github.com/conventional-changelog/commitlint) ---- 提交消息规范规则
+> + [@commitlint/config-conventional](https://github.com/conventional-changelog/commitlint) ---- 提交消息规范规则
 > + [husky](https://github.com/typicode/husky) ------------------------------- 用于 git 提交前对 message 进行 `commitlint` 校验
 
 
