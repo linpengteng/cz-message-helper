@@ -1,6 +1,6 @@
 {
   "name": "cz-message-helper",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "A commit message helper for commitizen",
   "license": "MIT",
   "author": "lin pengteng <china.linpengteng@gmail.com>",
@@ -10,9 +10,9 @@
     "index.js"
   ],
   "keywords": [
-    "commit message customizable",
-    "commit message helper",
-    "commit lint",
+    "cz-customizable",
+    "commit-message",
+    "commitlint",
     "commitizen"
   ],
   "scripts": {
