@@ -4,10 +4,13 @@
   "description": "A commit message helper for commitizen",
   "license": "MIT",
   "author": "lin pengteng <china.linpengteng@gmail.com>",
+  "files": [
+    "index.js"
+  ],
   "keywords": [
-    "commit",
-    "commit message",
+    "@commitlint/config-conventional",
     "commit message customizable",
+    "commit lint",
     "commitizen"
   ],
   "scripts": {
