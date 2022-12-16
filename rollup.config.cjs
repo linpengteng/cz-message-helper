@@ -17,7 +17,9 @@ module.exports = defineConfig([
         exports: 'auto',
         sourcemap: false,
         entryFileNames: '[name].js',
-        chunkFileNames: '[name]-[hash].js'
+        chunkFileNames: '[name]-[hash].js',
+        paths: id => /.+(\/config\.(cn|en)\.(js|ts))/.test(id) ? id.replace(/.+(\/config\.(cn|en)\.(js|ts))/, './src/$1') : undefined
+
       }
     ],
     plugins: [
@@ -31,9 +33,11 @@ module.exports = defineConfig([
       'node:path',
       'node:fs',
       'node:os',
-      'inquirer',
+      '../config.cn.js',
+      '../config.en.js',
       'find-config',
       'word-wrap',
+      'inquirer',
       'rimraf'
     ]
   }

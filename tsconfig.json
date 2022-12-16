@@ -27,7 +27,11 @@
     "*.ts",
     "*.js",
     "*.cjs",
-    "*.mjs"
+    "*.mjs",
+    "src/.config.en.js",
+    "src/.config.en.js",
+    "src/.config.cn.js",
+    "src/.config.cn.js"
   ],
   "exclude": [
     "dist/**/*.ts",

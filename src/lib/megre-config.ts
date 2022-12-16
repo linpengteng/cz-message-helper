@@ -1,7 +1,7 @@
 import type { Answers, ListQuestion, InputQuestion, NumberQuestion, ExpandQuestion, ConfirmQuestion } from 'inquirer'
 import buildCommit from './build-commit'
-import enConfig from '../config.en'
-import cnConfig from '../config.cn'
+import enConfig from '../config.en.js'
+import cnConfig from '../config.cn.js'
 import log from '../util/logger'
 
 

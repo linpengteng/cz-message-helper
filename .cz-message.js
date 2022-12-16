@@ -1,3 +1,3 @@
 module.exports = {
-  language: 'en' // 支持 en | cn
+  language: 'cn' // 支持 cn | en
 }
