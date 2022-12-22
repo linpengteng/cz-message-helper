@@ -64,6 +64,9 @@
 ```json
 {
   "config": {
+    "cz-message-helper": {
+      "config": ".cz-message.en.js" // 自定义 .cz-message.js 路径
+    },
     "commitizen": {
       "path": "node_modules/cz-message-helper"
     }
