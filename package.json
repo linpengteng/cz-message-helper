@@ -1,13 +1,14 @@
 {
   "name": "cz-message-helper",
-  "version": "1.1.11",
+  "version": "1.2.0",
   "description": "A commit message helper for commitizen",
   "license": "MIT",
   "author": "lin pengteng <china.linpengteng@gmail.com>",
+  "main": "./index.cjs",
   "files": [
     "src/config.en.js",
     "src/config.cn.js",
-    "index.js"
+    "index.cjs"
   ],
   "keywords": [
     "cz-customizable",
@@ -59,7 +60,7 @@
       "config": ".cz-message.en.js"
     },
     "commitizen": {
-      "path": "./index.js"
+      "path": "./index.cjs"
     }
   },
   "engines": {

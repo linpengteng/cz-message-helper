@@ -11,4 +11,4 @@ node_modules/*
 *.lock
 
 # build file
-index.js
+index.cjs

@@ -16,10 +16,9 @@ module.exports = defineConfig([
         format: 'cjs',
         exports: 'auto',
         sourcemap: false,
-        entryFileNames: '[name].js',
-        chunkFileNames: '[name]-[hash].js',
+        entryFileNames: '[name].cjs',
+        chunkFileNames: '[name]-[hash].cjs',
         paths: id => /.+(\/config\.(cn|en)\.(js|ts))/.test(id) ? id.replace(/.+(\/config\.(cn|en)\.(js|ts))/, './src/$1') : undefined
-
       }
     ],
     plugins: [
