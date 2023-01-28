@@ -50,9 +50,16 @@ module.exports = {
       name: 'subject',
       message: 'Please write a SHORT tense description of the change(word number less than 50):',
       validate(value) {
+        if (!value.trim()) {
+          return 'Cannot be empty'
+        }
+
         return value.length > 50
           ? `Exceed limit: 50`
           : true
+      },
+      filter(value, answers) {
+        return value.trim()
       }
     },
 

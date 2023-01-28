@@ -53,9 +53,16 @@ module.exports = {
       name: 'subject',
       message: '请简明扼要的摘要描述(建议字数在50字内):',
       validate(value) {
-        return value.length > 50
-          ? `[subject] Exceed limit: 50`
+        if (!value.trim()) {
+          return '描述内容不可为空'
+        }
+
+        return value.trim().length > 50
+          ? `字数超出限制: ${value.trim().length}`
           : true
+      },
+      filter(value, answers) {
+        return value.trim()
       }
     },
 
