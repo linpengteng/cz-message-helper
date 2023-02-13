@@ -2,8 +2,8 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "lib",
-    "target": "ES2020",
-    "module": "ES2020",
+    "target": "ESNext",
+    "module": "ESNext",
     "moduleResolution": "node",
     "jsx": "preserve",
     "strict": true,
@@ -31,7 +31,7 @@
     "src/.config.en.js",
     "src/.config.en.js",
     "src/.config.cn.js",
-    "src/.config.cn.js"
+    "src/.config.cn.js",
   ],
   "exclude": [
     "dist/**/*.ts",

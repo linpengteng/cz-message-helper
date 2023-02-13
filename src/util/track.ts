@@ -22,7 +22,7 @@ const addListener = () => {
           : null
 
         while (path) {
-          rimraf.sync(path, { maxBusyTries: 6 })
+          rimraf.sync(path, { maxRetries: 6 })
           path = paths.shift()
         }
       } catch (err) {

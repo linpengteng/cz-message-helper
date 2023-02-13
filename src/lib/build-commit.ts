@@ -17,6 +17,6 @@ const initialize = (result: string) => {
 
 
 export default (config: TypeConfig, answers: Answers) => {
-  const wrap = (str: any, opt: any) => wordWrap(str, { width: 100, indent: '', ...opt })
+  const wrap = (str: any, opt: any) => wordWrap(str, { width: 999999, indent: '', ...opt })
   return initialize(config.templater?.(answers, wrap) || '')
 }

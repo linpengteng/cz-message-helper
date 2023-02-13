@@ -27,7 +27,7 @@ const addListener = () => {
                     ? paths.shift()
                     : null;
                 while (path) {
-                    rimraf.sync(path, { maxBusyTries: 6 });
+                    rimraf.sync(path, { maxRetries: 6 });
                     path = paths.shift();
                 }
             }
@@ -113,7 +113,7 @@ const initialize = (result) => {
     return result.replace(/\\n/g, '\n');
 };
 var buildCommit = (config, answers) => {
-    const wrap = (str, opt) => wordWrap(str, { width: 100, indent: '', ...opt });
+    const wrap = (str, opt) => wordWrap(str, { width: 999999, indent: '', ...opt });
     return initialize(config.templater?.(answers, wrap) || '');
 };
 
