@@ -65,7 +65,9 @@
 {
   "config": {
     "cz-message-helper": {
-      "config": ".cz-message.en.js"
+      // When type: "module" in package.json, the suffix needs to be changed to .cjs
+      // Create `.cz-message.cjs` configuration file in the root directory of the project
+      "config": ".cz-message.js"
     },
     "commitizen": {
       "path": "node_modules/cz-message-helper"
@@ -209,9 +211,9 @@ export default {
         if (!value.trim()) {
           return '描述内容不可为空'
         }
-        
+
         return value.length > 50
-          ? `[subject] Exceed limit: 50`
+          ? `描述内容字数不能超过50`
           : true
       }
     },

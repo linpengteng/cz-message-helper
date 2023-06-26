@@ -65,7 +65,7 @@
 {
   "config": {
     "cz-message-helper": {
-      "config": ".cz-message.en.js"
+      "config": ".cz-message.js"
     },
     "commitizen": {
       "path": "node_modules/cz-message-helper"
@@ -205,7 +205,7 @@ export default {
         if (!value.trim()) {
           return 'Cannot be empty'
         }
-        
+
         return value.length > 50
           ? `Exceed limit: 50`
           : true
