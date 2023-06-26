@@ -77,7 +77,7 @@ module.exports = {
       name: 'breaking',
       message: '请列出任何重大变化(可选)\n',
       when(answers) {
-        return ['feat', 'fix'].includes(answers.type.toLowerCase())
+        return /^(:[a-z0-9A-Z_-]+(:)(\s*))?(feat|fix)(\2\s*)?$/.test(answers.type.toLowerCase())
       }
     },
 
