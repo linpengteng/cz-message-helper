@@ -206,6 +206,10 @@ export default {
       name: 'subject',
       message: '请简明扼要的摘要描述(建议字数在50字内):',
       validate(value) {
+        if (!value.trim()) {
+          return '描述内容不可为空'
+        }
+        
         return value.length > 50
           ? `[subject] Exceed limit: 50`
           : true

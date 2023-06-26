@@ -202,6 +202,10 @@ export default {
       name: 'subject',
       message: 'Please write a SHORT tense description of the change(word number less than 50):',
       validate(value) {
+        if (!value.trim()) {
+          return 'Cannot be empty'
+        }
+        
         return value.length > 50
           ? `Exceed limit: 50`
           : true
@@ -219,7 +223,7 @@ export default {
       name: 'breaking',
       message: 'Please list any BREAKING CHANGES (optional):',
       when(answers) {
-        return ['feat', 'fix'].includes(answers.type.toLowerCase())
+        return /^(\:[a-z0-9A-Z_-]+(\:)(\s*))?(feat|fix)(\2\s*)?$/.test(answers.type.toLowerCase())
       }
     },
 
