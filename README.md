@@ -65,8 +65,6 @@
 {
   "config": {
     "cz-message-helper": {
-      // When type: "module" in package.json, the suffix needs to be changed to .cjs
-      // Create `.cz-message.cjs` configuration file in the root directory of the project
       "config": ".cz-message.js"
     },
     "commitizen": {
@@ -148,6 +146,13 @@ module.exports = {
 <br/>
 
 5. Good, 接下来你能通过 `git add .` 和 `git cz` 进行使用
+
+<br/>
+
+6. 有关其他一些问题
+
+  - 当 package.json 中 type: "module" 时, 需在根目录下创建 `.cz-message.cjs` 配置文件
+  - 当 package.json 中 type: "module" 时, 后缀需改成 .cjs, 例 "config": ".cz-message.cjs"
 
 <br/>
 

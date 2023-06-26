@@ -148,6 +148,13 @@ module.exports = {
 
 <br/>
 
+6. Some Question
+
+- When type: "module" in package.json, Create `.cz-message.cjs` file in the root directory of the project
+- When type: "module" in package.json, the suffix needs to be changed to .cjs, eg: "config": ".cz-message.cjs"
+
+<br/>
+
 # More configuration options -- `.cz-message.js`
 ```js
 export default {
