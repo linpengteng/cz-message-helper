@@ -65,7 +65,7 @@
 {
   "config": {
     "cz-message-helper": {
-      "config": ".cz-message.js"
+      "config": ".cz-message.cjs"
     },
     "commitizen": {
       "path": "node_modules/cz-message-helper"
@@ -76,7 +76,7 @@
 
 <br/>
 
-2. Create `.cz-message.js` configuration file in the project root directory
+2. Create `.cz-message.cjs` configuration file in the project root directory
 
 ```js
 module.exports = {
@@ -148,16 +148,9 @@ module.exports = {
 
 <br/>
 
-6. Some Question
-
-- When type: "module" in package.json, Create `.cz-message.cjs` file in the root directory of the project
-- When type: "module" in package.json, the suffix needs to be changed to .cjs, eg: "config": ".cz-message.cjs"
-
-<br/>
-
-# More configuration options -- `.cz-message.js`
+# More configuration options -- `.cz-message.cjs`
 ```js
-export default {
+module.exports = {
   questions: [
     {
       type: 'list',

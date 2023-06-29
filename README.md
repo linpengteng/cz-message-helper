@@ -65,7 +65,7 @@
 {
   "config": {
     "cz-message-helper": {
-      "config": ".cz-message.js"
+      "config": ".cz-message.cjs"
     },
     "commitizen": {
       "path": "node_modules/cz-message-helper"
@@ -76,7 +76,7 @@
 
 <br/>
 
-2. 在项目根目录下创建 `.cz-message.js` 配置文件
+2. 在项目根目录下创建 `.cz-message.cjs` 配置文件
 
 ```js
 module.exports = {
@@ -156,9 +156,9 @@ module.exports = {
 
 <br/>
 
-# 更多配置选项 -- `.cz-message.js`
+# 更多配置选项 -- `.cz-message.cjs`
 ```js
-export default {
+module.exports = {
   questions: [
     {
       type: 'list',

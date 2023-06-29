@@ -1,6 +1,6 @@
 {
   "name": "cz-message-helper",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "A commit message helper for commitizen",
   "license": "MIT",
   "author": "lin pengteng <china.linpengteng@gmail.com>",
@@ -37,22 +37,22 @@
     "@commitlint/config-conventional": "^17.4.2",
     "@rollup/plugin-commonjs": "^24.0.1",
     "@rollup/plugin-node-resolve": "^15.0.1",
-    "@rollup/plugin-typescript": "^11.0.0",
+    "@rollup/plugin-typescript": "^11.1.2",
     "@rollup/pluginutils": "^5.0.2",
     "@types/eslint": "^8.21.0",
     "@types/find-config": "^1.0.1",
     "@types/inquirer": "^9.0.3",
-    "@types/node": "^18.13.0",
-    "@typescript-eslint/eslint-plugin": "^5.51.0",
-    "@typescript-eslint/parser": "^5.51.0",
+    "@types/node": "^20.3.2",
+    "@typescript-eslint/eslint-plugin": "^5.60.1",
+    "@typescript-eslint/parser": "^5.60.1",
     "eslint": "^8.34.0",
     "eslint-plugin-vue": "^9.9.0",
     "husky": "^8.0.3",
-    "lint-staged": "^13.1.1",
+    "lint-staged": "^13.2.3",
     "prettier": "^2.8.4",
-    "rollup": "^3.15.0",
+    "rollup": "^3.25.3",
     "shx": "^0.3.4",
-    "typescript": "^4.9.5"
+    "typescript": "^5.1.6"
   },
   "config": {
     "cz-message-helper": {
