@@ -141,6 +141,7 @@ module.exports = {
 
   # step2 
   npx husky add .husky/commit-msg 'npx --no-install commitlint --edit $1'
+  npx husky add .husky/pre-commit 'npx lint-staged'
 ```
 
 <br/>
