@@ -212,14 +212,14 @@ module.exports = {
     {
       type: 'input',
       name: 'subject',
-      message: '请简明扼要的摘要描述(建议字数在50字内):',
+      message: '请简明扼要的摘要描述(建议字数在72字内):',
       validate(value) {
         if (!value.trim()) {
           return '描述内容不可为空'
         }
 
-        return value.length > 50
-          ? `描述内容字数不能超过50`
+        return value.length > 72
+          ? `描述内容字数不能超过72`
           : true
       }
     },
