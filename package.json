@@ -1,6 +1,6 @@
 {
   "name": "cz-message-helper",
-  "version": "2.0.0-beta",
+  "version": "2.0.0",
   "description": "A commit message helper for commitizen",
   "license": "MIT",
   "author": "lin pengteng <china.linpengteng@gmail.com>",
