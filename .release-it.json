@@ -29,6 +29,7 @@
     "commitMessage": "chore: Add new Tag and Release v${version}"
   },
   "github": {
+    "tokenRef": "GITHUB_TOKEN",
     "release": true,
     "draft": false
   },
