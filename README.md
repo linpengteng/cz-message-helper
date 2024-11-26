@@ -11,28 +11,28 @@
 <p align="center">
   <img 
     style="width: 100%; margin: 0 auto;" 
-    src="https://linpengteng.github.io/resource/cz-message-helper/command.cn.png" 
+    src="https://linpengteng.github.io/resource/cz-message-helper/command.en.png"
     alt="cz-message-helper"
   >
 </p>
 
-> `Committezen` 插件的提交消息助手  
-> 注意，您可以实现一致的提交消息  
-> 注意，您可以自定义提交消息模版
+> A commit message helper of Commitizen plugin.  
+> Note that you can achieve consistent commit messages.  
+> Note that you can customizable commit message pattern.
 
 <br/>
 
-# 英文 README.md
-> https://github.com/linpengteng/cz-message-helper/blob/main/README.en.md
+# Chinese README.md
+> https://github.com/linpengteng/cz-message-helper/blob/main/README.zh-CN.md
 
 <br/>
 
-# 安装
-> 因为cz-message-helper是committen的插件, 所以您需要安装以下依赖项 
-> + [commitizen](https://github.com/commitizen/cz-cli)  ------------------------- 规范你的提交消息
-> + [@commitlint/cli](https://github.com/conventional-changelog/commitlint) --------------------- `commitizen` `cli` 工具  
-> + [@commitlint/config-conventional](https://github.com/conventional-changelog/commitlint) ---- 提交消息规范规则
-> + [husky](https://github.com/typicode/husky) ------------------------------- 用于 git 提交前对 message 进行 `commitlint` 校验
+# Installation
+> Since cz-message-helper is a plug-in for committen. you need to install the following dependencies  
+> + [commitizen](https://github.com/commitizen/cz-cli)  ------------------------- Standardize your commit message
+> + [@commitlint/cli](https://github.com/conventional-changelog/commitlint) --------------------- A commitizen cli
+> + [@commitlint/config-conventional](https://github.com/conventional-changelog/commitlint) ---- A commit message specification rule
+> + [husky](https://github.com/typicode/husky) ------------------------------- Brefore git commit lint commit message
 
 
 ```bash
@@ -58,8 +58,8 @@
 
 <br/>
 
-# 如何使用
-1. 在package.json中添加commitizen配置
+# Usage
+1. Add commitizen configurate in package.json
 
 ```json
 {
@@ -76,18 +76,17 @@
 
 <br/>
 
-2. 在项目根目录下创建 `.cz-message.cjs` 配置文件
+2. Create `.cz-message.cjs` configuration file in the project root directory
 
 ```js
 module.exports = {
-  language: 'cn' // 选项: en | cn
+  language: 'en' // options: en | cn
 }
 ```
 
 <br/>
 
-3. 在项目根目录下创建 `commitlint.config.js` 配置文件
-
+3. Create `commitlint.config.js` configuration file in the project root directory
 
 ```js
 module.exports = {
@@ -133,7 +132,7 @@ module.exports = {
 
 <br/>
 
-4. husky 初始化安装 和 添加 `git` `commit-msg` 钩子 
+4. Install husky And add git commit-msg hook 
 
 ```bash
   # step1
@@ -141,65 +140,54 @@ module.exports = {
 
   # step2 
   npx husky add .husky/commit-msg 'npx --no-install commitlint --edit $1'
-  npx husky add .husky/pre-commit 'npx lint-staged'
 ```
 
 <br/>
 
-5. Good, 接下来你能通过 `git add .` 和 `git cz` 进行使用
+5. Good, You can use by `git add .` and `git cz`
 
 <br/>
 
-6. 有关其他一些问题
-
-  - 当 package.json 中 type: "module" 时, 需在根目录下创建 `.cz-message.cjs` 配置文件
-  - 当 package.json 中 type: "module" 时, 后缀需改成 .cjs, 例 "config": ".cz-message.cjs"
-
-<br/>
-
-# 更多配置选项 -- `.cz-message.cjs`
+# More configuration options -- `.cz-message.cjs`
 ```js
 module.exports = {
   questions: [
     {
       type: 'list',
       name: 'type',
-      message: '请选择要提交的更改类型:',
+      message: 'Please select the type of change that you\'re committing:',
       choices: [
-        { value: 'fix', name: 'fix: -------- 修复BUG' },
-        { value: 'feat', name: 'feat: ------- 新功能' },
-        { value: 'begin', name: 'begin: ------ 创建新存储库' },
-        { value: 'docs', name: 'docs: ------- 仅文档更改' },
-        { value: 'style', name: 'style: ------ 不影响代码运行的更改(调整空白、格式、缺少分号等)' },
-        { value: 'chore', name: 'chore: ------ 对构建过程或辅助工具的更改以及文档生成等库' },
-        { value: 'refactor', name: 'refactor: --- 重构架构或代码' },
-        { value: 'perf', name: 'perf:  ------ 改进性能的代码更改' },
-        { value: 'test', name: 'test:  ------ 添加测试单元' },
-        { value: 'revert', name: 'revert: ----- 回退至某一个版本' },
-        { value: 'merge', name: 'merge: ------ 合并一个分支, 解决冲突分支' },
-        { value: 'wip', name: 'wip: -------- 正在进行中的工作' }
+        { value: 'fix', name: 'fix: -------- A bug fix' },
+        { value: 'feat', name: 'feat: ------- A new feature' },
+        { value: 'begin', name: 'begin: ------ Begin new repository' },
+        { value: 'docs', name: 'docs: ------- Documentation only changes' },
+        { value: 'style', name: 'style: ------ Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)' },
+        { value: 'chore', name: 'chore: ------ Changes to the build process or auxiliary tools and libraries such as documentation generation' },
+        { value: 'refactor', name: 'refactor: --- A code change that neither fixes a bug nor adds a feature' },
+        { value: 'perf', name: 'perf: ------- A code change that improves performance' },
+        { value: 'test', name: 'test: ------- Add Test Unit' },
+        { value: 'revert', name: 'revert: ----- Revert to a commit' },
+        { value: 'merge', name: 'merge: ------ Merge from branches' },
+        { value: 'wip', name: 'wip: -------- Work in progress' }
       ]
     },
 
     {
       type: 'list',
       name: 'scope',
-      message: '请选择更改的范围:',
+      message: 'Please select the SCOPE of this change (optional):',
       choices() {
         return [
-          { name: '无', value: false },
-          { name: '自定义', value: 'custom' }
+          { name: 'empty', value: false },
+          { name: 'custom', value: 'custom' }
         ]
-      },
-      filter(value, answers) {
-        return value || ''
       }
     },
 
     {
       type: 'input',
       name: 'customScope',
-      message: '请输入自定义的变更的范围(可选):',
+      message: 'Please input the custom SCOPE of this change:',
       when(answers) {
         return answers.scope === 'custom'
       },
@@ -212,14 +200,14 @@ module.exports = {
     {
       type: 'input',
       name: 'subject',
-      message: '请简明扼要的摘要描述(建议字数在72字内):',
+      message: 'Please write a SHORT tense description of the change(word number less than 72):',
       validate(value) {
         if (!value.trim()) {
-          return '描述内容不可为空'
+          return 'Cannot be empty'
         }
 
         return value.length > 72
-          ? `描述内容字数不能超过72`
+          ? `Exceed limit: 72`
           : true
       }
     },
@@ -227,13 +215,13 @@ module.exports = {
     {
       type: 'input',
       name: 'body',
-      message: '请提供更详细的变更说明(可选), 使用“\\n”换行:'
+      message: 'Please provide a LONGER description of the change (optional). Use "\\n" to break new line:'
     },
 
     {
       type: 'input',
       name: 'breaking',
-      message: '请列出任何重大变化(可选)',
+      message: 'Please list any BREAKING CHANGES (optional):',
       when(answers) {
         return /^(\:[a-z0-9A-Z_-]+(\:)(\s*))?(feat|fix)(\2\s*)?$/.test(answers.type.toLowerCase())
       }
@@ -242,7 +230,7 @@ module.exports = {
     {
       type: 'input',
       name: 'footer',
-      message: '请列出此更改关闭的任何问题(可选), 例如: #31,#34:'
+      message: 'Please list any ISSUES CLOSED by this change (optional). Eg: #31, #34:'
     }
   ],
 
@@ -259,15 +247,15 @@ module.exports = {
     return template
   },
 
-  language: 'cn'
+  language: 'en'
 }
 
 ```
 
-> 说明  
-> 1. templater --- 指定生成消息的模板
-> 2. questions --- 关于问题选项和描述, 请看 [Inquirer#Question](https://github.com/SBoudrias/Inquirer.js#Question)  
-> 3. language ---- 预设选项仅支持中文和英文，自定义 `questions` 时无效
+> Note  
+> 1. templater --- Template used to generate message
+> 2. questions --- About questions options and description look [Inquirer](https://github.com/SBoudrias/Inquirer.js)  
+> 3. language ---- The preset options only support Chinese and English, Invalidate when customizing a questions
 
 <br/>
 
