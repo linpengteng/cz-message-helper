@@ -1,12 +1,32 @@
 {
   "plugins": {
     "@release-it/conventional-changelog": {
-      "preset": "angular",
+      "preset": {
+        "name": "conventionalcommits",
+        "types": [
+          {
+            "type": "begin",
+            "section": "🎉 Start New Repository"
+          },
+          {
+            "type": "feat",
+            "section": "🚀 New Features"
+          },
+          {
+            "type": "fix",
+            "section": "🐛 Bug Fixes"
+          },
+          {
+            "type": "refactor",
+            "section": "🔥 Refactor Features"
+          }
+        ]
+      },
       "infile": "CHANGELOG.md"
     }
   },
   "git": {
-    "commitMessage": "chore: Release v${version}"
+    "commitMessage": "chore: Add new Tag and Release v${version}"
   },
   "github": {
     "release": true,

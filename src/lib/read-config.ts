@@ -1,7 +1,7 @@
+import logger from '../util/logger'
 import findConfig from 'find-config'
-import log from '../util/logger'
 
-export default (config = '.cz-message.js') => {
+export default (config = '.cz-message.cjs') => {
   const pkg = findConfig.require('package.json', { home: false })
   const czConfig = findConfig.require(config, { home: false })
 
@@ -13,5 +13,5 @@ export default (config = '.cz-message.js') => {
     return czConfig
   }
 
-  log.error('Unable to find a configuration file. Please look documentation: https://github.com/linpengteng/cz-message-helper#Usage')
+  logger.error('Unable to find a configuration file. Please look documentation: https://github.com/linpengteng/cz-message-helper#Usage')
 }

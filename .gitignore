@@ -8,8 +8,8 @@ yarn-debug.log*
 yarn-error.log*
 
 # Editor directories and files
-.idea
 .DS_Store
+.idea
 *.suo
 *.ntvs*
 *.njsproj

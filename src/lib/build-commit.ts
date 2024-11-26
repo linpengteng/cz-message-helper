@@ -1,22 +1,28 @@
-import type { Answers, ListQuestion, InputQuestion, NumberQuestion, ExpandQuestion, ConfirmQuestion } from 'inquirer'
+import { Question } from 'inquirer'
+import { Answers } from 'inquirer'
 import wordWrap from 'word-wrap'
 
+export default (config: Config, answers: Answers) => {
+  const wrap = (str: any, opt?: wordWrap.IOptions) => {
+    return wordWrap(str, {
+      width: 99999,
+      indent: '',
+      ...opt,
+    })
+  }
 
-interface TypeConfig {
-  questions?: Array<ListQuestion | InputQuestion | NumberQuestion | ExpandQuestion | ConfirmQuestion> | null
-  templater?: ((answers: Answers, wrap: Function) => string) | null,
-  language?: 'en' | 'cn' | null
+  const format = (result?: string) => {
+    return result?.replace(/\\n/g, '\n') || ''
+  }
+
+  return format(config.templater?.(answers, wrap))
 }
 
-
-const initialize = (result: string) => {
-  const chars = ['`', '"', '\\$', '!', '<', '>', '&']
-  for (const char of chars) result = result.replace(new RegExp(char, 'g'), `\\${char}`)
-  return result.replace(/\\n/g, '\n')
+export interface Config {
+  templater?: ((answers: Answers, wrap: typeof wordWrap) => string) | null;
+  questions?: Array<Question> | null;
+  language?: 'en' | 'cn' | null;
 }
 
-
-export default (config: TypeConfig, answers: Answers) => {
-  const wrap = (str: any, opt: any) => wordWrap(str, { width: 999999, indent: '', ...opt })
-  return initialize(config.templater?.(answers, wrap) || '')
-}
+export type { Question }
+export type { Answers }

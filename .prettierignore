@@ -1,8 +1,8 @@
 # ignore prettier files
 
 .gitignore
-node_modules/*
-**/dist/*
+/node_modules/*
+/index.cjs
 *.svg
 *.ico
 *.md

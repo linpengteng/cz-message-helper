@@ -4,11 +4,14 @@ import path from 'node:path'
 import cnst from 'node:constants'
 import rimraf from 'rimraf'
 
-
 const paths = [] as string[]
 const flags = cnst.O_CREAT | cnst.O_TRUNC | cnst.O_RDWR | cnst.O_EXCL // open flags
 const mode = cnst.S_IRUSR | cnst.S_IWUSR // file permissions
 const dir = path.resolve(os.tmpdir())
+
+interface CallbackFn {
+  (err: any, ...rest: any[]): void;
+}
 
 let tracking = false
 let attached = false
@@ -34,29 +37,27 @@ const addListener = () => {
   }
 }
 
-const promisify = (cb?: Function) => {
-  let promise = null
+const promisify = (cb?: CallbackFn) => {
   let callback = cb
 
-  if (typeof callback !== 'function') {
-    promise = new Promise(function(resolve, reject) {
-      callback = (err: any, ...args: any[]) => {
-        process.nextTick(function() {
-          if (err) {
-            reject(err)
-          } else if (args.length === 1) {
-            resolve(args[0])
-          } else {
-            resolve(args)
-          }
-        })
-      }
-    })
-  }
+  const promise = new Promise((resolve, reject) => {
+    callback = (err: any, data: any) => {
+      cb?.(err, data)
+
+      process.nextTick(function() {
+        if (err) {
+          reject(err)
+          return
+        }
+
+        resolve(data)
+      })
+    }
+  })
 
   return {
     promise: promise,
-    callback: callback!
+    callback: callback!,
   }
 }
 
@@ -66,7 +67,7 @@ const pathify = (prefix: string) => {
   return path.join(dir, name)
 }
 
-const open = (cb: Function) => {
+const open = (cb: (err: any, info: any) => void) => {
   const path = pathify('f-')
   const p = promisify(cb)
 
@@ -75,6 +76,7 @@ const open = (cb: Function) => {
       paths.push(path)
       addListener()
     }
+
     p.callback(err, { path, fd })
   })
 

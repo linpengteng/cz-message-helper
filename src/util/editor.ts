@@ -8,7 +8,7 @@ export default function(file: string, cb: (code: number | null) => void) {
   const ps = spawn(
     bin!,
     args.concat([file]),
-    { stdio: 'inherit' }
+    { stdio: 'inherit' },
   )
 
   ps.on('exit', cb)
