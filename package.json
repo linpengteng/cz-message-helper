@@ -34,24 +34,24 @@
     "word-wrap": "^1.2.5"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.8.0",
-    "@commitlint/config-conventional": "^19.8.0",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
     "@eslint/config-inspector": "^1.0.2",
-    "@eslint/js": "^9.25.1",
+    "@eslint/js": "^9.26.0",
     "@release-it/conventional-changelog": "^10.0.1",
     "@stylistic/eslint-plugin": "^4.2.0",
     "@types/eslint": "^9.6.1",
     "@types/find-config": "^1.0.4",
-    "@types/node": "^22.15.2",
-    "eslint": "^9.25.1",
+    "@types/node": "^22.15.17",
+    "eslint": "^9.26.0",
     "husky": "^9.1.7",
-    "lint-staged": "^15.5.1",
+    "lint-staged": "^15.5.2",
     "prettier": "^3.5.3",
-    "release-it": "^19.0.1",
+    "release-it": "^19.0.2",
     "shx": "^0.4.0",
     "tsup": "^8.4.0",
     "typescript": "^5.8.3",
-    "typescript-eslint": "^8.31.0"
+    "typescript-eslint": "^8.32.0"
   },
   "config": {
     "cz-message-helper": {
